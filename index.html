@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javohir Usmonov | Link Hub</title>
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Javohir Usmonov | Barcha muhim havolalar, ijtimoiy tarmoqlar va loyihalar yagona manzilda.">
+  <meta property="og:title" content="Javohir Usmonov | Link Hub">
+  <meta property="og:description" content="Javohir Usmonov — Dasturchi, dizayner va kontent muallifining barcha havolalari yagona joyda.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/avatar.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Javohir Usmonov | Link Hub">
+  <meta name="twitter:description" content="Javohir Usmonovning rasmiy va foydali havolalari.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/jpeg" href="/avatar.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          animation: {
+            'glow-pulse': 'glowPulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-soft': 'bounceSoft 2s infinite',
+          },
+          keyframes: {
+            glowPulse: {
+              '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(99, 102, 241, 0.6)' },
+              '50%': { opacity: .75, boxShadow: '0 0 35px rgba(168, 85, 247, 0.8)' },
+            },
+            bounceSoft: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-4px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.7);
+    }
+
+    /* Ambient background mesh */
+    .bg-mesh-dark {
+      background-color: #0b0f19;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+    }
+
+    .bg-mesh-light {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.07) 0px, transparent 50%);
+    }
+
+    /* Glass card effects */
+    .glass-card {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Interactive hover lift */
+    .hover-lift {
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-3px);
+    }
+    .hover-lift:active {
+      transform: scale(0.98);
+    }
+
+    /* Active Highlight border shimmer */
+    .highlight-card {
+      position: relative;
+    }
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 1.1rem;
+      padding: 1.5px;
+      background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #6366f1);
+      background-size: 300% 300%;
+      animation: borderGradient 4s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    @keyframes borderGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white bg-mesh-light dark:bg-mesh-dark">
+
+  <!-- TOP FLOATING CONTROLS -->
+  <header class="fixed top-4 left-0 right-0 z-30 pointer-events-none">
+    <div class="max-w-md mx-auto px-4 flex items-center justify-between pointer-events-auto">
+      <!-- Status pill or mini logo -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card bg-white/70 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/80 shadow-sm backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-xs font-semibold tracking-wide text-slate-700 dark:text-slate-300">Link Hub</span>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-1.5 p-1 rounded-full glass-card bg-white/70 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/80 shadow-sm backdrop-blur-md">
+        <!-- Audio toggle -->
+        <button id="soundToggleBtn" title="Ovozni yoqish/o'chirish" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95">
+          <i class="fa-solid fa-volume-high text-xs"></i>
+        </button>
+
+        <!-- Share modal toggle -->
+        <button id="openShareBtn" title="Sahifani ulashish & QR kod" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95">
+          <i class="fa-solid fa-share-nodes text-xs"></i>
+        </button>
+
+        <!-- Theme Toggle (Dark/Light) -->
+        <button id="themeToggleBtn" title="Mavzuni o'zgartirish" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95">
+          <i id="themeIcon" class="fa-solid fa-moon text-xs"></i>
+        </button>
+
+        <!-- Admin / Edit Toggle -->
+        <button id="openAdminBtn" title="Boshqaruv paneli" class="w-8 h-8 rounded-full flex items-center justify-center bg-brand-500/10 text-brand-600 dark:text-brand-400 hover:bg-brand-500 hover:text-white transition active:scale-95">
+          <i class="fa-solid fa-sliders text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-md mx-auto min-h-screen px-4 pt-20 pb-16 flex flex-col justify-between">
+    
+    <!-- Profile & Content Container -->
+    <div class="w-full flex flex-col items-center">
+
+      <!-- PROFILE HEADER -->
+      <section id="profileSection" class="w-full text-center flex flex-col items-center mb-6">
+        <!-- Avatar Wrapper -->
+        <div class="relative group mb-4">
+          <div class="relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-brand-500 via-purple-500 to-pink-500 shadow-xl shadow-brand-500/20">
+            <img 
+              id="avatarImg" 
+              src="/avatar.jpg" 
+              alt="Javohir Usmonov"
+              class="w-full h-full object-cover rounded-full ring-2 ring-white dark:ring-slate-900 group-hover:scale-105 transition-transform duration-300"
+              onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=80'"
+            />
+          </div>
+          <!-- Verified badge icon -->
+          <div class="absolute bottom-1 right-1 w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center ring-2 ring-white dark:ring-slate-900 shadow" title="Faol profil">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+        </div>
+
+        <!-- Name & Handle -->
+        <h1 id="profileName" class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-1">
+          Javohir Usmonov
+        </h1>
+        
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span id="profileHandle" class="text-sm font-semibold text-brand-600 dark:text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded-full">
+            @javohir_usmonov
+          </span>
+          <button id="copyHandleBtn" title="Handleni nusxalash" class="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <!-- Bio -->
+        <p id="profileBio" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-sm px-2 mb-3">
+          Dasturchi | Dizayner | Kontent muallifi
+        </p>
+
+        <!-- Location & Status Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-2 text-xs">
+          <span id="locationBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass-card bg-slate-100/80 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">
+            <i class="fa-solid fa-location-dot text-rose-500"></i>
+            <span id="profileLocation">Buxoro, O'zbekiston</span>
+          </span>
+
+          <span id="statusBadge" class="hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span id="profileBadgeText"></span>
+          </span>
+        </div>
+      </section>
+
+      <!-- SOCIAL ICONS BAR -->
+      <nav id="socialsBar" aria-label="Ijtimoiy tarmoqlar" class="flex flex-wrap items-center justify-center gap-2.5 mb-8 w-full">
+        <!-- Rendered dynamically -->
+      </nav>
+
+      <!-- LINKS CONTAINER -->
+      <section id="linksSection" aria-label="Havolalar ro'yxati" class="w-full space-y-3.5">
+        <!-- Rendered dynamically -->
+      </section>
+
+      <!-- Empty state when no links -->
+      <div id="emptyLinksState" class="hidden w-full text-center py-12 glass-card rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
+        <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mb-3">
+          <i class="fa-solid fa-link-slash text-lg"></i>
+        </div>
+        <p class="text-sm font-medium text-slate-600 dark:text-slate-400">Hozircha hech qanday havola qo'shilmagan.</p>
+        <button onclick="openAdminDrawer('linksTab')" class="mt-3 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+          + Yangi havola qo'shish
+        </button>
+      </div>
+
+      <!-- FEATURED PROJECTS SECTION -->
+      <section id="projectsSection" class="w-full mt-9">
+        <div class="flex items-center justify-between mb-3.5 px-1">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-xs">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h2 class="text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              Asosiy Loyihalar
+            </h2>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-500/10 border border-brand-500/20 px-2 py-0.5 rounded-full">
+            Featured
+          </span>
+        </div>
+
+        <!-- Projects Cards Grid -->
+        <div id="projectsGrid" class="w-full space-y-3.5">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-12 text-center text-xs text-slate-400 dark:text-slate-500 space-y-2">
+      <div class="flex items-center justify-center gap-2">
+        <span>Yaratildi:</span>
+        <span class="font-bold tracking-wider text-slate-700 dark:text-slate-300">LINK HUB</span>
+        <span class="text-slate-300 dark:text-slate-700">•</span>
+        <span>Zero Backend</span>
+      </div>
+      <p>© <span id="currentYear"></span> Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+  </main>
+
+  <!-- ==================== SHARE & QR MODAL ==================== -->
+  <div id="shareModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div id="shareModalBox" class="w-full max-w-sm glass-card bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-200/80 dark:border-slate-800 transform scale-95 transition-all duration-300">
+      
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <i class="fa-solid fa-qrcode text-brand-500"></i>
+          Profilni ulashish
+        </h3>
+        <button id="closeShareBtn" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- QR Code Canvas Container -->
+      <div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800 mb-4">
+        <div id="qrcode" class="p-3 bg-white rounded-xl shadow-sm"></div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">
+          Kamerani ushlab skanerlang yoki havola orqali ulashing
+        </p>
+      </div>
+
+      <!-- Copy link input bar -->
+      <div class="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700 mb-4">
+        <input 
+          id="shareUrlInput" 
+          type="text" 
+          readonly 
+          class="w-full bg-transparent px-3 py-1.5 text-xs text-slate-700 dark:text-slate-200 outline-none truncate" 
+          value=""
+        />
+        <button id="copyShareUrlBtn" class="shrink-0 px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition active:scale-95">
+          <i class="fa-regular fa-copy"></i>
+          <span>Nusxa</span>
+        </button>
+      </div>
+
+      <!-- Social sharing shortcuts -->
+      <div class="grid grid-cols-3 gap-2">
+        <button id="shareTelegramBtn" class="flex flex-col items-center justify-center gap-1.5 py-2.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-600 dark:text-sky-400 transition text-xs font-semibold">
+          <i class="fa-brands fa-telegram text-base"></i>
+          <span>Telegram</span>
+        </button>
+        <button id="shareWhatsAppBtn" class="flex flex-col items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 transition text-xs font-semibold">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>WhatsApp</span>
+        </button>
+        <button id="shareNativeBtn" class="flex flex-col items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 transition text-xs font-semibold">
+          <i class="fa-solid fa-arrow-up-right-from-square text-base"></i>
+          <span>Boshqa</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== ADMIN DRAWER / MODAL ==================== -->
+  <div id="adminDrawerBackdrop" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <aside id="adminDrawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-lg bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <!-- Drawer Header -->
+    <div class="p-4 sm:p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0 bg-slate-50/50 dark:bg-slate-900/50">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-brand-500 text-white flex items-center justify-center shadow-md shadow-brand-500/25">
+          <i class="fa-solid fa-sliders text-sm"></i>
+        </div>
+        <div>
+          <h2 class="font-extrabold text-slate-900 dark:text-white text-base">Boshqaruv Paneli</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Client-Side / LocalStorage rejimida</p>
+        </div>
+      </div>
+      <button id="closeAdminBtn" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex border-b border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/40 p-1.5 gap-1.5 shrink-0 text-xs font-semibold">
+      <button class="admin-tab-btn flex-1 py-2 rounded-lg text-brand-600 dark:text-brand-400 bg-white dark:bg-slate-900 shadow-xs transition" data-tab="profileTab">
+        <i class="fa-solid fa-user mr-1.5"></i>Profil
+      </button>
+      <button class="admin-tab-btn flex-1 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-tab="linksTab">
+        <i class="fa-solid fa-link mr-1.5"></i>Havolalar
+      </button>
+      <button class="admin-tab-btn flex-1 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-tab="socialsTab">
+        <i class="fa-solid fa-share-nodes mr-1.5"></i>Ijtimoiy
+      </button>
+      <button class="admin-tab-btn flex-1 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition" data-tab="backupTab">
+        <i class="fa-solid fa-database mr-1.5"></i>Zaxira
+      </button>
+    </div>
+
+    <!-- Drawer Content (Scrollable) -->
+    <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
+
+      <!-- ================= TAB 1: PROFIL ================= -->
+      <div id="profileTab" class="admin-tab-content space-y-4">
+        <form id="profileForm" class="space-y-4" onsubmit="event.preventDefault(); saveProfileFromForm();">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">To'liq ism</label>
+            <input id="editName" type="text" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Handle / Username</label>
+              <input id="editHandle" type="text" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Joylashuv</label>
+              <input id="editLocation" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Avatar Rasm URL</label>
+            <div class="flex gap-2">
+              <input id="editAvatar" type="text" required class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+              <button type="button" onclick="previewAvatar()" class="px-3 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 transition">
+                Prevyu
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Status nishoni (Badge)</label>
+            <input id="editBadge" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="Bo'sh qoldirilsa ko'rinmaydi">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Biografiya (Bio)</label>
+            <textarea id="editBio" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-sm font-bold shadow-md shadow-brand-500/25 transition active:scale-95 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Profilni saqlash
+          </button>
+        </form>
+      </div>
+
+      <!-- ================= TAB 2: HAVOLALAR ================= -->
+      <div id="linksTab" class="admin-tab-content hidden space-y-5">
+        
+        <!-- Add Link Form Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80">
+          <h3 id="linkFormTitle" class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-between">
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-plus-circle text-brand-500"></i>
+              <span>Yangi havola qo'shish</span>
+            </span>
+            <button id="cancelEditLinkBtn" type="button" onclick="resetLinkForm()" class="hidden text-xs text-rose-500 hover:underline">
+              Bekor qilish
+            </button>
+          </h3>
+
+          <form id="linkItemForm" class="space-y-3" onsubmit="event.preventDefault(); saveLinkItem();">
+            <input type="hidden" id="linkFormId" value="">
+
+            <div>
+              <input id="linkTitleInput" type="text" required placeholder="Sarlavha (masalan: Telegram Kanalim)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+
+            <div>
+              <input id="linkSubtitleInput" type="text" placeholder="Qisqa izoh (masalan: Kundalik fikrlar va tahlillar)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+
+            <div>
+              <input id="linkUrlInput" type="url" required placeholder="URL havola (https://...)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <input id="linkIconInput" type="text" placeholder="FontAwesome (fab fa-telegram)" value="fas fa-link" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+              </div>
+              <div class="flex items-center px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+                <label class="flex items-center gap-2 cursor-pointer text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  <input id="linkHighlightInput" type="checkbox" class="w-4 h-4 rounded text-brand-500 focus:ring-brand-500">
+                  <span>Muhim (Highlight)</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" id="submitLinkBtn" class="w-full py-2.5 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-brand-500/25 transition active:scale-95 flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus"></i>
+              <span>Havolani qo'shish</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Links Management List -->
+        <div>
+          <div class="flex items-center justify-between mb-2.5 px-1">
+            <h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+              Mavjud havolalar (<span id="linksCountBadge">0</span>)
+            </h4>
+            <button onclick="resetAllClicks()" class="text-[11px] font-semibold text-amber-500 hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Barcha kliklarni tozalash</span>
+            </button>
+          </div>
+
+          <div id="adminLinksList" class="space-y-2">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= TAB 3: IJTIMOIY TARMOQLAR ================= -->
+      <div id="socialsTab" class="admin-tab-content hidden space-y-4">
+        
+        <!-- Add Social Form -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80">
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-1.5">
+            <i class="fa-solid fa-plus-circle text-brand-500"></i>
+            <span>Ijtimoiy tarmoq qo'shish</span>
+          </h3>
+
+          <form id="socialItemForm" class="space-y-3" onsubmit="event.preventDefault(); addSocialItem();">
+            <div class="grid grid-cols-2 gap-2">
+              <input id="socialPlatformInput" type="text" required placeholder="Nomi (Telegram, GitHub...)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+              <input id="socialIconInput" type="text" required placeholder="Ikonka (fab fa-telegram)" value="fab fa-telegram" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+            <input id="socialUrlInput" type="url" required placeholder="Profil URL (https://t.me/...)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+            
+            <button type="submit" class="w-full py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-brand-500/25 transition active:scale-95 flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus"></i>
+              <span>Tarmoqni qo'shish</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Socials List -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5 px-1">
+            Mavjud tarmoqlar (<span id="socialsCountBadge">0</span>)
+          </h4>
+          <div id="adminSocialsList" class="space-y-2">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= TAB 4: ZAXIRA VA SOZLAMALAR ================= -->
+      <div id="backupTab" class="admin-tab-content hidden space-y-5">
+        
+        <!-- Export Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80">
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-2">
+            <i class="fa-solid fa-file-export text-brand-500"></i>
+            Eksport (Backup)
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            Barcha profil ma'lumotlari, havolalar va sozlamalarni JSON fayl sifatida yuklab oling.
+          </p>
+          <button onclick="exportDataToJson()" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 text-white rounded-xl text-xs sm:text-sm font-semibold transition active:scale-95 flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-download"></i>
+            <span>JSON Faylni Yuklab Olish</span>
+          </button>
+        </div>
+
+        <!-- Import Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80">
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-2">
+            <i class="fa-solid fa-file-import text-purple-500"></i>
+            Import (Restore)
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            Avval yuklab olingan .json zaxira faylini tanlang va ma'lumotlarni qayta tiklang.
+          </p>
+          <input type="file" id="importFileInput" accept=".json" class="hidden" onchange="handleImportFile(event)">
+          <button onclick="document.getElementById('importFileInput').click()" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs sm:text-sm font-semibold transition active:scale-95 flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-solid fa-upload"></i>
+            <span>JSON Faylni Tanlash va Tiklash</span>
+          </button>
+        </div>
+
+        <!-- Danger Zone: Reset to Default -->
+        <div class="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/20">
+          <h3 class="text-sm font-bold text-rose-600 dark:text-rose-400 mb-1 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Standart holatga qaytarish
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            Barcha kiritilgan o'zgarishlar o'chiriladi va boshlang'ich standart ma'lumotlar tiklanadi.
+          </p>
+          <button onclick="confirmResetDefaults()" class="w-full py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-semibold transition active:scale-95">
+            Standart ma'lumotlarni tiklash
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 flex items-center justify-between text-xs text-slate-500 shrink-0">
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-circle-check text-emerald-500"></i>
+        <span>LocalStorage bilan sinxron</span>
+      </span>
+      <button onclick="closeAdminDrawer()" class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-300 dark:hover:bg-slate-700 transition">
+        Yopish
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toastContainer" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none w-full max-w-xs px-4"></div>
+
+  <!-- ==================== MAIN SCRIPT ==================== -->
+  <script>
+    /* =========================================================
+       1. DATA MODEL & LOCALSTORAGE
+    ========================================================= */
+    const STORAGE_KEY = 'linkhub_app_data_v6';
+
+    const DEFAULT_DATA = {
+      profile: {
+        name: "Javohir Usmonov",
+        handle: "@javohir_usmonov",
+        bio: "Dasturchi | Dizayner | Kontent muallifi. Zamonaviy veb-texnologiyalar va sun'iy intellekt ishqibozi.",
+        avatar: "/avatar.jpg",
+        location: "Buxoro, O'zbekiston",
+        badge: ""
+      },
+      theme: "dark",
+      soundEnabled: true,
+      links: [
+        {
+          id: "link-1",
+          title: "Telegram Kanalim",
+          subtitle: "Kundalik fikrlar, tahlillar va dasturlash",
+          url: "https://t.me",
+          icon: "fab fa-telegram",
+          highlight: true,
+          clicks: 142
+        },
+        {
+          id: "link-2",
+          title: "GitHub Portfolio",
+          subtitle: "Ochiq kodli loyihalar va repozitoriyalar",
+          url: "https://github.com",
+          icon: "fab fa-github",
+          highlight: false,
+          clicks: 89
+        },
+        {
+          id: "link-3",
+          title: "LinkedIn Profil",
+          subtitle: "Kasbiy tajriba va professional aloqalar",
+          url: "https://linkedin.com",
+          icon: "fab fa-linkedin-in",
+          highlight: false,
+          clicks: 65
+        },
+        {
+          id: "link-4",
+          title: "YouTube Kanal",
+          subtitle: "Veb-dasturlash darslari va masterklasslar",
+          url: "https://youtube.com",
+          icon: "fab fa-youtube",
+          highlight: false,
+          clicks: 120
+        }
+      ],
+      socials: [
+        { platform: "telegram", url: "https://t.me", icon: "fab fa-telegram" },
+        { platform: "github", url: "https://github.com", icon: "fab fa-github" },
+        { platform: "linkedin", url: "https://linkedin.com", icon: "fab fa-linkedin-in" },
+        { platform: "instagram", url: "https://instagram.com", icon: "fab fa-instagram" }
+      ],
+      projects: [
+        {
+          id: "proj-1",
+          title: "AI Portfolio & Resume Hub",
+          description: "Sun'iy intellekt orqali zamonaviy portfolios va rezyumelarni avtomatik shakllantiruvchi platforma.",
+          tags: ["Vue.js", "Tailwind CSS", "Gemini AI"],
+          url: "https://github.com",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=320&q=80",
+          badge: "AI Platform"
+        },
+        {
+          id: "proj-2",
+          title: "Fintech Realtime Analytics",
+          description: "Kripto-aktivlar va moliyaviy tranzaksiyalarni real vaqt rejimida tahlil qiluvchi boshqaruv paneli.",
+          tags: ["React", "TypeScript", "Node.js"],
+          url: "https://github.com",
+          image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&h=320&q=80",
+          badge: "FinTech"
+        }
+      ]
+    };
+
+    let appData = loadData();
+
+    function loadData() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (!stored) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_DATA));
+          return JSON.parse(JSON.stringify(DEFAULT_DATA));
+        }
+        const parsed = JSON.parse(stored);
+        return {
+          profile: { ...DEFAULT_DATA.profile, ...(parsed.profile || {}) },
+          theme: parsed.theme || DEFAULT_DATA.theme,
+          soundEnabled: parsed.soundEnabled !== undefined ? parsed.soundEnabled : true,
+          links: Array.isArray(parsed.links) ? parsed.links : DEFAULT_DATA.links,
+          socials: Array.isArray(parsed.socials) ? parsed.socials : DEFAULT_DATA.socials,
+          projects: Array.isArray(parsed.projects) ? parsed.projects : DEFAULT_DATA.projects
+        };
+      } catch (err) {
+        console.error("Ma'lumotlarni o'qishda xatolik:", err);
+        return JSON.parse(JSON.stringify(DEFAULT_DATA));
+      }
+    }
+
+    function saveData() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+      } catch (e) {
+        showToast("Xatolik: Ma'lumotlarni saqlab bo'lmadi!", "error");
+      }
+    }
+
+    /* =========================================================
+       2. WEB AUDIO API SYNTHESIZER
+    ========================================================= */
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          audioCtx = new AudioContext();
+        }
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playSound(type = 'click') {
+      if (!appData.soundEnabled) return;
+      const ctx = getAudioContext();
+      if (!ctx) return;
+
+      try {
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        if (type === 'click') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(600, now);
+          osc.frequency.exponentialRampToValueAtTime(300, now + 0.05);
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+          osc.start(now);
+          osc.stop(now + 0.05);
+        } else if (type === 'success') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, now);
+          osc.frequency.setValueAtTime(659.25, now + 0.06);
+          gain.gain.setValueAtTime(0.06, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+          osc.start(now);
+          osc.stop(now + 0.18);
+        } else if (type === 'toggle') {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(440, now);
+          osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+          gain.gain.setValueAtTime(0.05, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.08);
+        } else if (type === 'delete') {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(350, now);
+          osc.frequency.exponentialRampToValueAtTime(150, now + 0.1);
+          gain.gain.setValueAtTime(0.04, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+          osc.start(now);
+          osc.stop(now + 0.1);
+        }
+      } catch (e) {
+        // audio policy ignored
+      }
+    }
+
+    /* =========================================================
+       3. THEME & UI HELPERS
+    ========================================================= */
+    function applyTheme(theme) {
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('themeIcon');
+      if (theme === 'dark') {
+        html.classList.add('dark');
+        themeIcon.className = 'fa-solid fa-sun text-xs text-amber-400';
+      } else {
+        html.classList.remove('dark');
+        themeIcon.className = 'fa-solid fa-moon text-xs text-slate-600';
+      }
+    }
+
+    function toggleTheme() {
+      playSound('toggle');
+      appData.theme = appData.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(appData.theme);
+      saveData();
+      showToast(`Mavzu: ${appData.theme === 'dark' ? 'Qorong\'u' : 'Yorug\''} rejimga o'tkazildi`);
+    }
+
+    function updateSoundBtnUI() {
+      const btn = document.getElementById('soundToggleBtn');
+      if (appData.soundEnabled) {
+        btn.innerHTML = '<i class="fa-solid fa-volume-high text-xs text-brand-500"></i>';
+        btn.title = "Ovoz: Yoqilgan (bosib o'chirish)";
+      } else {
+        btn.innerHTML = '<i class="fa-solid fa-volume-xmark text-xs text-slate-400"></i>';
+        btn.title = "Ovoz: O'chirilgan (bosib yoqish)";
+      }
+    }
+
+    function toggleSound() {
+      appData.soundEnabled = !appData.soundEnabled;
+      updateSoundBtnUI();
+      saveData();
+      if (appData.soundEnabled) {
+        playSound('toggle');
+        showToast("Mikro-tovushlar yoqildi");
+      } else {
+        showToast("Mikro-tovushlar o'chirildi");
+      }
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      
+      const icon = type === 'error' ? 'fa-circle-xmark text-rose-500' :
+                   type === 'success' ? 'fa-circle-check text-emerald-500' :
+                   'fa-circle-info text-brand-500';
+
+      toast.className = `flex items-center gap-2.5 px-4 py-2.5 rounded-2xl glass-card bg-slate-900/90 text-white text-xs font-semibold shadow-2xl border border-slate-700/80 transition-all duration-300 transform translate-y-3 opacity-0`;
+      toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
+      
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-3', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 2600);
+    }
+
+    /* =========================================================
+       4. PUBLIC PROFILE RENDERERS
+    ========================================================= */
+    function renderProfile() {
+      const p = appData.profile;
+      document.getElementById('avatarImg').src = p.avatar;
+      document.getElementById('profileName').textContent = p.name;
+      document.getElementById('profileHandle').textContent = p.handle;
+      document.getElementById('profileBio').textContent = p.bio;
+      document.getElementById('profileLocation').textContent = p.location;
+      
+      const badgeEl = document.getElementById('statusBadge');
+      const badgeTextEl = document.getElementById('profileBadgeText');
+      if (p.badge && p.badge.trim() !== '') {
+        badgeEl.classList.remove('hidden');
+        badgeTextEl.textContent = p.badge;
+      } else {
+        badgeEl.classList.add('hidden');
+        badgeTextEl.textContent = '';
+      }
+
+      document.title = `${p.name} | Link Hub`;
+    }
+
+    function renderSocials() {
+      const container = document.getElementById('socialsBar');
+      container.innerHTML = '';
+
+      if (!appData.socials || appData.socials.length === 0) {
+        container.classList.add('hidden');
+        return;
+      }
+      container.classList.remove('hidden');
+
+      appData.socials.forEach(s => {
+        const link = document.createElement('a');
+        link.href = s.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.title = s.platform;
+        link.className = 'w-10 h-10 rounded-full glass-card bg-white/70 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700/60 flex items-center justify-center text-sm shadow-xs hover:text-brand-500 dark:hover:text-brand-400 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-brand-500/25 active:scale-95 transition-all duration-200';
+        link.innerHTML = `<i class="${s.icon}"></i>`;
+        
+        link.addEventListener('click', () => {
+          playSound('click');
+        });
+
+        container.appendChild(link);
+      });
+    }
+
+    function renderLinks() {
+      const container = document.getElementById('linksSection');
+      const emptyState = document.getElementById('emptyLinksState');
+      container.innerHTML = '';
+
+      if (!appData.links || appData.links.length === 0) {
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      appData.links.forEach(link => {
+        const card = document.createElement('div');
+        const isHighlight = Boolean(link.highlight);
+
+        card.className = `group relative cursor-pointer overflow-hidden rounded-2xl p-4 transition-all duration-300 hover-lift active:scale-[0.98] ${
+          isHighlight 
+            ? 'highlight-card bg-white/95 dark:bg-slate-800/90 shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25 hover:-translate-y-1' 
+            : 'glass-card bg-white/80 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 shadow-xs hover:border-brand-500/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-lg hover:shadow-brand-500/10 hover:-translate-y-1'
+        }`;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-3.5 relative z-10">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div class="w-11 h-11 shrink-0 rounded-xl flex items-center justify-center text-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${
+                isHighlight 
+                  ? 'bg-gradient-to-tr from-brand-500 to-pink-500 text-white shadow-md shadow-brand-500/30' 
+                  : 'bg-slate-100 dark:bg-slate-700/80 text-brand-600 dark:text-brand-400'
+              }">
+                <i class="${link.icon || 'fas fa-link'}"></i>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-sm font-bold text-slate-900 dark:text-white truncate group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                    ${escapeHtml(link.title)}
+                  </h3>
+                  ${isHighlight ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-pink-500/15 text-pink-500 border border-pink-500/20">
+                      Tavsiya
+                    </span>
+                  ` : ''}
+                </div>
+                ${link.subtitle ? `
+                  <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5 font-normal">
+                    ${escapeHtml(link.subtitle)}
+                  </p>
+                ` : ''}
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 shrink-0">
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-900/60 px-2 py-1 rounded-full border border-slate-200/50 dark:border-slate-800">
+                <i class="fa-regular fa-eye text-[10px]"></i>
+                <span id="click-count-${link.id}">${link.clicks || 0}</span>
+              </span>
+              <div class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 group-hover:text-brand-500 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-all">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </div>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          playSound('click');
+          link.clicks = (link.clicks || 0) + 1;
+          const countSpan = document.getElementById(`click-count-${link.id}`);
+          if (countSpan) countSpan.textContent = link.clicks;
+          saveData();
+          window.open(link.url, '_blank', 'noopener,noreferrer');
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function renderProjects() {
+      const container = document.getElementById('projectsGrid');
+      const section = document.getElementById('projectsSection');
+      if (!container || !section) return;
+
+      container.innerHTML = '';
+      if (!appData.projects || appData.projects.length === 0) {
+        section.classList.add('hidden');
+        return;
+      }
+      section.classList.remove('hidden');
+
+      appData.projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'group relative overflow-hidden rounded-2xl glass-card bg-white/80 dark:bg-slate-800/65 border border-slate-200/80 dark:border-slate-700/70 hover:border-brand-500/50 hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 hover-lift cursor-pointer flex flex-col justify-between';
+
+        const tagsHtml = (proj.tags || []).map(t => 
+          `<span class="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-slate-100 dark:bg-slate-700/80 text-slate-600 dark:text-slate-300">${escapeHtml(t)}</span>`
+        ).join('');
+
+        card.innerHTML = `
+          <div>
+            <div class="relative h-32 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+              <img 
+                src="${proj.image}" 
+                alt="${escapeHtml(proj.title)}" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=320&q=80'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              ${proj.badge ? `
+                <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-black/60 backdrop-blur-md text-white border border-white/20">
+                  ${escapeHtml(proj.badge)}
+                </span>
+              ` : ''}
+            </div>
+
+            <div class="p-3.5">
+              <div class="flex items-start justify-between gap-2 mb-1.5">
+                <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                  ${escapeHtml(proj.title)}
+                </h3>
+                <div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-400 group-hover:bg-brand-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-3 line-clamp-2">
+                ${escapeHtml(proj.description)}
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                ${tagsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          playSound('click');
+          if (proj.url) {
+            window.open(proj.url, '_blank', 'noopener,noreferrer');
+          }
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    /* =========================================================
+       5. SHARE & QR CODE MODAL
+    ========================================================= */
+    let qrCodeInstance = null;
+
+    function openShareModal() {
+      playSound('toggle');
+      const modal = document.getElementById('shareModal');
+      const modalBox = document.getElementById('shareModalBox');
+      const shareUrlInput = document.getElementById('shareUrlInput');
+      const currentUrl = window.location.href;
+
+      shareUrlInput.value = currentUrl;
+
+      const qrContainer = document.getElementById('qrcode');
+      qrContainer.innerHTML = '';
+      qrCodeInstance = new QRCode(qrContainer, {
+        text: currentUrl,
+        width: 150,
+        height: 150,
+        colorDark: "#0f172a",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.M
+      });
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modalBox.classList.remove('scale-95');
+    }
+
+    function closeShareModal() {
+      playSound('click');
+      const modal = document.getElementById('shareModal');
+      const modalBox = document.getElementById('shareModalBox');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modalBox.classList.add('scale-95');
+    }
+
+    /* =========================================================
+       6. ADMIN DRAWER & TAB MANAGEMENT
+    ========================================================= */
+    function openAdminDrawer(tabName = 'profileTab') {
+      playSound('toggle');
+      const drawer = document.getElementById('adminDrawer');
+      const backdrop = document.getElementById('adminDrawerBackdrop');
+      
+      populateProfileForm();
+      renderAdminLinksList();
+      renderAdminSocialsList();
+      switchAdminTab(tabName);
+
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      drawer.classList.remove('translate-x-full');
+    }
+
+    function closeAdminDrawer() {
+      playSound('click');
+      const drawer = document.getElementById('adminDrawer');
+      const backdrop = document.getElementById('adminDrawerBackdrop');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      drawer.classList.add('translate-x-full');
+    }
+
+    function switchAdminTab(tabId) {
+      document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.className = 'admin-tab-btn flex-1 py-2 rounded-lg text-brand-600 dark:text-brand-400 bg-white dark:bg-slate-900 shadow-xs transition';
+        } else {
+          btn.className = 'admin-tab-btn flex-1 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition';
+        }
+      });
+
+      document.querySelectorAll('.admin-tab-content').forEach(content => {
+        if (content.id === tabId) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    function populateProfileForm() {
+      const p = appData.profile;
+      document.getElementById('editName').value = p.name || '';
+      document.getElementById('editHandle').value = p.handle || '';
+      document.getElementById('editLocation').value = p.location || '';
+      document.getElementById('editAvatar').value = p.avatar || '';
+      document.getElementById('editBadge').value = p.badge || '';
+      document.getElementById('editBio').value = p.bio || '';
+    }
+
+    function saveProfileFromForm() {
+      playSound('success');
+      appData.profile.name = document.getElementById('editName').value.trim();
+      appData.profile.handle = document.getElementById('editHandle').value.trim();
+      appData.profile.location = document.getElementById('editLocation').value.trim();
+      appData.profile.avatar = document.getElementById('editAvatar').value.trim();
+      appData.profile.badge = document.getElementById('editBadge').value.trim();
+      appData.profile.bio = document.getElementById('editBio').value.trim();
+
+      saveData();
+      renderProfile();
+      showToast("Profil ma'lumotlari muvaffaqiyatli saqlandi!", "success");
+    }
+
+    function previewAvatar() {
+      const url = document.getElementById('editAvatar').value.trim();
+      if (url) {
+        document.getElementById('avatarImg').src = url;
+        showToast("Avatar prevyusi yangilandi");
+      }
+    }
+
+    function renderAdminLinksList() {
+      const container = document.getElementById('adminLinksList');
+      const countBadge = document.getElementById('linksCountBadge');
+      container.innerHTML = '';
+      countBadge.textContent = appData.links.length;
+
+      if (appData.links.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-6 text-xs text-slate-400 border border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
+            Havolalar mavjud emas. Yuqoridagi formadan qo'shing.
+          </div>
+        `;
+        return;
+      }
+
+      appData.links.forEach((link, index) => {
+        const item = document.createElement('div');
+        item.className = 'p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/70 flex items-center justify-between gap-3';
+        
+        item.innerHTML = `
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="flex flex-col gap-1 shrink-0">
+              <button onclick="reorderLink(${index}, -1)" ${index === 0 ? 'disabled class="opacity-20 cursor-not-allowed"' : 'class="hover:text-brand-500"'} title="Yuqoriga surish" class="text-[11px] text-slate-400">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <button onclick="reorderLink(${index}, 1)" ${index === appData.links.length - 1 ? 'disabled class="opacity-20 cursor-not-allowed"' : 'class="hover:text-brand-500"'} title="Pastga surish" class="text-[11px] text-slate-400">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="w-8 h-8 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-xs shrink-0 text-brand-500">
+              <i class="${link.icon || 'fas fa-link'}"></i>
+            </div>
+
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-bold text-slate-900 dark:text-white truncate">${escapeHtml(link.title)}</span>
+                ${link.highlight ? '<span class="w-2 h-2 rounded-full bg-pink-500" title="Highlight qilingan"></span>' : ''}
+              </div>
+              <p class="text-[11px] text-slate-400 truncate">${link.clicks || 0} marta bosildi</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1 shrink-0">
+            <button onclick="editLinkItem('${link.id}')" title="Tahrirlash" class="w-7 h-7 rounded-lg text-slate-500 hover:text-brand-500 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center transition">
+              <i class="fa-regular fa-pen-to-square text-xs"></i>
+            </button>
+            <button onclick="resetSingleLinkClicks('${link.id}')" title="Kliklarni 0 qilish" class="w-7 h-7 rounded-lg text-slate-500 hover:text-amber-500 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center transition">
+              <i class="fa-solid fa-rotate-left text-xs"></i>
+            </button>
+            <button onclick="deleteLinkItem('${link.id}')" title="O'chirish" class="w-7 h-7 rounded-lg text-slate-500 hover:text-rose-500 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center transition">
+              <i class="fa-regular fa-trash-can text-xs"></i>
+            </button>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function saveLinkItem() {
+      const id = document.getElementById('linkFormId').value;
+      const title = document.getElementById('linkTitleInput').value.trim();
+      const subtitle = document.getElementById('linkSubtitleInput').value.trim();
+      const url = document.getElementById('linkUrlInput').value.trim();
+      const icon = document.getElementById('linkIconInput').value.trim() || 'fas fa-link';
+      const highlight = document.getElementById('linkHighlightInput').checked;
+
+      if (!title || !url) {
+        showToast("Sarlavha va URL to'ldirilishi shart!", "error");
+        return;
+      }
+
+      if (id) {
+        const target = appData.links.find(l => l.id === id);
+        if (target) {
+          target.title = title;
+          target.subtitle = subtitle;
+          target.url = url;
+          target.icon = icon;
+          target.highlight = highlight;
+          showToast("Havola yangilandi!", "success");
+        }
+      } else {
+        const newLink = {
+          id: 'link-' + Date.now(),
+          title,
+          subtitle,
+          url,
+          icon,
+          highlight,
+          clicks: 0
+        };
+        appData.links.push(newLink);
+        showToast("Yangi havola qo'shildi!", "success");
+      }
+
+      playSound('success');
+      saveData();
+      resetLinkForm();
+      renderAdminLinksList();
+      renderLinks();
+    }
+
+    function editLinkItem(id) {
+      playSound('click');
+      const item = appData.links.find(l => l.id === id);
+      if (!item) return;
+
+      document.getElementById('linkFormId').value = item.id;
+      document.getElementById('linkTitleInput').value = item.title;
+      document.getElementById('linkSubtitleInput').value = item.subtitle || '';
+      document.getElementById('linkUrlInput').value = item.url;
+      document.getElementById('linkIconInput').value = item.icon || 'fas fa-link';
+      document.getElementById('linkHighlightInput').checked = Boolean(item.highlight);
+
+      document.getElementById('linkFormTitle').querySelector('span span').textContent = "Havolani tahrirlash";
+      document.getElementById('submitLinkBtn').querySelector('span').textContent = "O'zgarishlarni saqlash";
+      document.getElementById('cancelEditLinkBtn').classList.remove('hidden');
+
+      document.getElementById('linkItemForm').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetLinkForm() {
+      document.getElementById('linkFormId').value = '';
+      document.getElementById('linkTitleInput').value = '';
+      document.getElementById('linkSubtitleInput').value = '';
+      document.getElementById('linkUrlInput').value = '';
+      document.getElementById('linkIconInput').value = 'fas fa-link';
+      document.getElementById('linkHighlightInput').checked = false;
+
+      document.getElementById('linkFormTitle').querySelector('span span').textContent = "Yangi havola qo'shish";
+      document.getElementById('submitLinkBtn').querySelector('span').textContent = "Havolani qo'shish";
+      document.getElementById('cancelEditLinkBtn').classList.add('hidden');
+    }
+
+    function deleteLinkItem(id) {
+      if (!confirm("Haqiqatan ham bu havolani o'chirmoqchimisiz?")) return;
+      playSound('delete');
+      appData.links = appData.links.filter(l => l.id !== id);
+      saveData();
+      renderAdminLinksList();
+      renderLinks();
+      showToast("Havola o'chirildi");
+    }
+
+    function reorderLink(index, direction) {
+      playSound('click');
+      const targetIndex = index + direction;
+      if (targetIndex < 0 || targetIndex >= appData.links.length) return;
+
+      const temp = appData.links[index];
+      appData.links[index] = appData.links[targetIndex];
+      appData.links[targetIndex] = temp;
+
+      saveData();
+      renderAdminLinksList();
+      renderLinks();
+    }
+
+    function resetSingleLinkClicks(id) {
+      const link = appData.links.find(l => l.id === id);
+      if (link) {
+        link.clicks = 0;
+        saveData();
+        renderAdminLinksList();
+        renderLinks();
+        showToast("Kliklar soni 0 ga tushirildi");
+      }
+    }
+
+    function resetAllClicks() {
+      if (!confirm("Barcha havolalar bo'yicha kliklar statistikasini nolga tenglashtirmoqchimisiz?")) return;
+      playSound('delete');
+      appData.links.forEach(l => l.clicks = 0);
+      saveData();
+      renderAdminLinksList();
+      renderLinks();
+      showToast("Barcha statistika nolga tushirildi!");
+    }
+
+    function renderAdminSocialsList() {
+      const container = document.getElementById('adminSocialsList');
+      const countBadge = document.getElementById('socialsCountBadge');
+      container.innerHTML = '';
+      countBadge.textContent = appData.socials.length;
+
+      if (appData.socials.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-5 text-xs text-slate-400 border border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
+            Ijtimoiy tarmoqlar ulanmagan.
+          </div>
+        `;
+        return;
+      }
+
+      appData.socials.forEach((s, idx) => {
+        const item = document.createElement('div');
+        item.className = 'p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/70 flex items-center justify-between gap-3';
+        item.innerHTML = `
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-7 h-7 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-xs text-brand-500 shrink-0">
+              <i class="${s.icon}"></i>
+            </div>
+            <div class="min-w-0">
+              <span class="text-xs font-bold text-slate-900 dark:text-white capitalize truncate">${escapeHtml(s.platform)}</span>
+              <p class="text-[11px] text-slate-400 truncate">${escapeHtml(s.url)}</p>
+            </div>
+          </div>
+          <button onclick="deleteSocialItem(${idx})" title="O'chirish" class="w-7 h-7 rounded-lg text-slate-400 hover:text-rose-500 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center transition">
+            <i class="fa-regular fa-trash-can text-xs"></i>
+          </button>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function addSocialItem() {
+      const platform = document.getElementById('socialPlatformInput').value.trim();
+      const icon = document.getElementById('socialIconInput').value.trim();
+      const url = document.getElementById('socialUrlInput').value.trim();
+
+      if (!platform || !url || !icon) {
+        showToast("Barcha maydonlarni to'ldiring!", "error");
+        return;
+      }
+
+      playSound('success');
+      appData.socials.push({ platform, icon, url });
+      saveData();
+      renderAdminSocialsList();
+      renderSocials();
+
+      document.getElementById('socialPlatformInput').value = '';
+      document.getElementById('socialUrlInput').value = '';
+      showToast("Yangi ijtimoiy tarmoq qo'shildi!", "success");
+    }
+
+    function deleteSocialItem(index) {
+      playSound('delete');
+      appData.socials.splice(index, 1);
+      saveData();
+      renderAdminSocialsList();
+      renderSocials();
+      showToast("Ijtimoiy tarmoq olib tashlandi");
+    }
+
+    function exportDataToJson() {
+      playSound('click');
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      const fileName = `linkhub-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", fileName);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast("Zaxira fayli yuklab olindi!", "success");
+    }
+
+    function handleImportFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (!imported.profile || !Array.isArray(imported.links)) {
+            throw new Error("Noto'g'ri JSON tuzilmasi!");
+          }
+
+          appData = {
+            profile: { ...DEFAULT_DATA.profile, ...(imported.profile || {}) },
+            theme: imported.theme || 'dark',
+            soundEnabled: imported.soundEnabled !== undefined ? imported.soundEnabled : true,
+            links: Array.isArray(imported.links) ? imported.links : [],
+            socials: Array.isArray(imported.socials) ? imported.socials : [],
+            projects: Array.isArray(imported.projects) ? imported.projects : []
+          };
+
+          saveData();
+          applyTheme(appData.theme);
+          updateSoundBtnUI();
+          renderProfile();
+          renderSocials();
+          renderLinks();
+          renderProjects();
+          populateProfileForm();
+          renderAdminLinksList();
+          renderAdminSocialsList();
+
+          playSound('success');
+          showToast("Ma'lumotlar muvaffaqiyatli tiklandi!", "success");
+        } catch (err) {
+          playSound('delete');
+          showToast("Xatolik: Noto'g'ri JSON fayl tanlandi!", "error");
+        }
+      };
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    function confirmResetDefaults() {
+      if (!confirm("Rostdan ham barcha ma'lumotlarni boshlang'ich holatga qaytarmoqchimisiz?")) return;
+      playSound('delete');
+      appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+      saveData();
+      applyTheme(appData.theme);
+      updateSoundBtnUI();
+      renderProfile();
+      renderSocials();
+      renderLinks();
+      renderProjects();
+      populateProfileForm();
+      renderAdminLinksList();
+      renderAdminSocialsList();
+      showToast("Standart ma'lumotlar qayta tiklandi!", "success");
+    }
+
+    /* =========================================================
+       7. EVENT LISTENERS INITIALIZATION
+    ========================================================= */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      applyTheme(appData.theme);
+      updateSoundBtnUI();
+
+      renderProfile();
+      renderSocials();
+      renderLinks();
+      renderProjects();
+
+      document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+      document.getElementById('soundToggleBtn').addEventListener('click', toggleSound);
+      document.getElementById('openShareBtn').addEventListener('click', openShareModal);
+      document.getElementById('openAdminBtn').addEventListener('click', () => openAdminDrawer('profileTab'));
+
+      document.getElementById('copyHandleBtn').addEventListener('click', () => {
+        playSound('click');
+        navigator.clipboard.writeText(appData.profile.handle).then(() => {
+          showToast(`Nusxalandi: ${appData.profile.handle}`);
+        });
+      });
+
+      document.getElementById('closeShareBtn').addEventListener('click', closeShareModal);
+      document.getElementById('shareModal').addEventListener('click', (e) => {
+        if (e.target.id === 'shareModal') closeShareModal();
+      });
+
+      document.getElementById('copyShareUrlBtn').addEventListener('click', () => {
+        playSound('click');
+        const url = document.getElementById('shareUrlInput').value;
+        navigator.clipboard.writeText(url).then(() => {
+          showToast("Havola buferga nusxalandi!", "success");
+        });
+      });
+
+      document.getElementById('shareTelegramBtn').addEventListener('click', () => {
+        playSound('click');
+        const text = encodeURIComponent(`Salom! Mening havolalar markazim: ${appData.profile.name}`);
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+      });
+
+      document.getElementById('shareWhatsAppBtn').addEventListener('click', () => {
+        playSound('click');
+        const text = encodeURIComponent(`Salom! Mening havolalarim bilan tanishing: ${window.location.href}`);
+        window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+      });
+
+      document.getElementById('shareNativeBtn').addEventListener('click', () => {
+        playSound('click');
+        if (navigator.share) {
+          navigator.share({
+            title: `${appData.profile.name} | Link Hub`,
+            text: appData.profile.bio,
+            url: window.location.href,
+          }).catch(() => {});
+        } else {
+          document.getElementById('copyShareUrlBtn').click();
+        }
+      });
+
+      document.getElementById('closeAdminBtn').addEventListener('click', closeAdminDrawer);
+      document.getElementById('adminDrawerBackdrop').addEventListener('click', closeAdminDrawer);
+
+      document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          playSound('click');
+          switchAdminTab(btn.getAttribute('data-tab'));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
